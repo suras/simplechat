@@ -1,6 +1,10 @@
 Simplechat::Application.routes.draw do
   
  
+  get "public/index"
+
+  devise_for :users
+  root :to => "public#index"
   resources :chats
   # The priority is based upon order of creation:
   # first created -> highest priority.

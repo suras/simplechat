@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simplechat</title>
+  <title>Simplechat App</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -12,12 +12,22 @@ $('<p></p>').html( data.msg).appendTo('#chat-box');
 
 });
 </script>
-
+ 
 </head>
-<body>
-	
+<body ng-app="chatApp">
+  <header>
+  	 <h1>Welcome To The Awesome Chat App Powered By Faye</h1>
+  	  <%= render 'layouts/messages' %>
+        <%= render 'layouts/navigation' %>
+       
+       
+   </header>	
+ <div id="main" role="main">
+        <%= yield %>
+      </div>
+      <footer>
+      </footer>
 
-<%= yield %>
 
 </body>
 </html>

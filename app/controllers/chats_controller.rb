@@ -5,6 +5,8 @@ class ChatsController < ApplicationController
     
     
   end
+  
+
 
   def create
     @channel = "/messages/public"

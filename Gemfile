@@ -2,14 +2,17 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 
-# Bundle edge Rails instead:
+# Bundle edge Rails instead:e
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'devise'
+gem 'devise', "2.2.3"
 gem 'faye'
 gem 'private_pub'  #rackup private_pub.ru -s thin -E production
 gem 'sqlite3', :group => [:development, :test]
 gem 'thin'
+gem 'angularjs-rails'
+gem 'angularjs-rails-resource'
+gem 'bootstrap-sass'
 
 group :development do
   gem "better_errors", ">= 0.3.2"
