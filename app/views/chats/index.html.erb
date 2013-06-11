@@ -1,0 +1,10 @@
+<div class="chat-container">
+<div id="chat-box">
+	<p>Welcome to chat</p>
+	
+</div>
+ <%= form_tag chats_path, :remote => true do %>
+  <%= text_field_tag :message %>
+  <%= submit_tag "Send" %>
+<% end %>
+</div>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simplechat</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+ <%= subscribe_to "/messages/public" %>
+<script type="text/javascript">
+PrivatePub.subscribe("/messages/public", function(data) {
+$('<p></p>').html( data.msg).appendTo('#chat-box');
+
+});
+</script>
+
+</head>
+<body>
+	
+
+<%= yield %>
+
+</body>
+</html>
