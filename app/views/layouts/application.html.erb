@@ -23,6 +23,7 @@ $('<p></p>').html(data.name + ": " + data.msg).appendTo('#chat-box-private');
  
 </head>
 <body ng-app="chatApp">
+	<div id="container" class="container">
   <header>
   	 <h1>Welcome To The Awesome Chat App Powered By Faye</h1>
   	  <%= render 'layouts/messages' %>
@@ -34,8 +35,9 @@ $('<p></p>').html(data.name + ": " + data.msg).appendTo('#chat-box-private');
         <%= yield %>
       </div>
       <footer>
+      	<p>Copyright@2013 All Rights Reserved </p>
       </footer>
-
+</div>
 
 </body>
 </html>

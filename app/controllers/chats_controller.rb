@@ -1,5 +1,5 @@
 class ChatsController < ApplicationController
-  
+  before_filter :authenticate_user!
   
   def index
     @users = User.find(:all); 
