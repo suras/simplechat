@@ -6,11 +6,19 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
  <%= subscribe_to "/messages/public" %>
+ <%  if user_signed_in?  %>
+ <%= subscribe_to "/messages/private/#{current_user.name}" %>
+ <% end %>
 <script type="text/javascript">
 PrivatePub.subscribe("/messages/public", function(data) {
-$('<p></p>').html( data.msg).appendTo('#chat-box');
+$('<p></p>').html( data.msg).appendTo('#chat-box-public');
 
 });
+ <%  if user_signed_in?  %>
+PrivatePub.subscribe("/messages/private/<%= current_user.name %>", function(data) {
+$('<p></p>').html(data.name + ": " + data.msg).appendTo('#chat-box-private');
+});
+<% end %>
 </script>
  
 </head>

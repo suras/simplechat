@@ -1,5 +1,10 @@
 //reset input box
 $('#message').val('');
+$('.private_message').val('');
  
 // Sending the message
 <% publish_to @channel, @message %>
+<% if @sender_channel.present? %>
+
+<% publish_to @sender_channel, @message %>
+<% end %>
