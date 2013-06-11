@@ -4,7 +4,7 @@
 	<p>Welcome to Public chat</p>
 	
 </div>
-
+</br>
  <%= form_tag chats_path, :remote => true do %>
   <%= text_area_tag :message, nil, :size => '20x5' %><br />
   <%= submit_tag "Send" %>
@@ -15,9 +15,10 @@
 	<h4>Users List</h4>
 	<%= raw(userslist) %>
 	<div id="chat-box-private">
-	<p>Welcome to Privatechat chat</p>
+	<p>Welcome to Private chat</p>
 	
 </div>
+</br>
 	<%= form_tag chats_path, :remote => true do %>
   <%= text_area_tag :message, nil ,:size => '20x5', :class => 'private_message' %><br />
   <%=label_tag :"Type The Name Of User"%>

@@ -23,3 +23,13 @@
   background-color: #FCC;
   border: solid 1px #C66;
 }
+
+#chat-box-private {
+    background: none repeat scroll 0 0 #DAECFB;
+    padding: 6px;
+}
+
+#chat-box-public {
+    background: none repeat scroll 0 0 wheat;
+    padding: 6px;
+}
