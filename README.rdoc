@@ -2,3 +2,5 @@ Simple chat
 
 start the  server in terminal by "rackup private_pub.ru -s thin -E production" for faye
 
+The app is at http://suraschatapp.herokuapp.com
+
